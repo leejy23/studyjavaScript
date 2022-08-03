@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var li = ['a','b','c'];
+	alert(li);
+	li.push('d'); //li 배열에 원소 d를 추가함
+	alert(li);
+	li=li.concat(['e','f']); //한번에 여러게를 추가하고싶을때 사용하는 방법, 합친 배열을 다시 li배열에 넣는다.
+	alert(li);
+	li.unshift('z'); //배열의 시작 지점에 z를 넣음, 나머지 원소들은 하나씩 뒤로 밀림
+	alert(li);
+	//li.splice(집어넣을 위치, 그 위치의 앞(0)or뒤(1) 선택함. 뒤(1)선택 시 해당위치의 원소를 지우고 넣음, 집어넣을 원소)
+	li.splice(1,0,'k') //-> z,k,a,b,d,d,e,f,
+	alert(li);
+</script>
+</body>
+</html>
