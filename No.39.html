@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var grades = {
+    'list': {'lee': 10, 'kim': 6, 'park': 80},//객체 안에 다시 객체를 넣을 수 있음
+    'show' : function(){                      //객체 않에 함수를 넣을 수 도있음
+        for(var name in this.list){       //this.list = 객체 안에 키값list가 가리키는 객체들 가져옴 )lee, kim, park
+            document.write(name+':'+this.list[name]+"<br />");
+	        }
+	    }
+	};
+	grades.show(); //grade 객체의 show 함수 호출하기
+	//객체지향 프로그래밍
+</script>
+</body>
+</html>
