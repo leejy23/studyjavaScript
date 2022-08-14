@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var pattern = /a/;
+	pattern.exec('abcde');  // 결과: ['a'], abcde에서 a를 찾는 것, exec는 정보 추출을 위해 사용
+	pattern.exec('bcdef');  //결과: null
+
+	pattern.test('abcde');  // 결과: true, test는 정보의 존재유무를 확인하기 위해 사용함
+	pattern.test('bcdef');  //결과: false
+
+
+	var patterns = /a./;   //'.'=문자를 의미함
+	patterns.exec('abcde');  // 결과: ['ab']
+
+
+</script>
+</body>
+</html>
