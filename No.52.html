@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var urlPattern = /\b(?:https?):\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+	var content = '생활코딩 : http://opentutorials.org/course/1 입니다. 네이버 : http://naver.com 입니다. ';
+	var result = content.replace(urlPattern, function(url){ //url을 검색했을때 함수를 호출했다면 url을 첫번째 인자로 전달함 
+	    return '<a href="'+url+'">'+url+'</a>'; //그 인자를 받아서 리턴 정보로 치환해준다
+	});
+	console.log(result);
+</script>
+</body>
+</html>
