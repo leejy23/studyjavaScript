@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//옵션 i = 패턴에서 검출되는 텍스트는 대소문자를 구분하지 않음
+	var xi = /a/;
+	"Abcde".match(xi); // null, 옵션i가 없어 대문자를 구분하지 못했음
+
+	var oi = /a/i;
+	"Abcde".match(oi); //["A"]
+
+	//옵션 g = 패턴에 해당되는 문자열을 전부 리턴해줌
+	var xg = /a/;
+	"abcdea".match(xg); //["a"];
+
+	var og = /a/g;
+	"abcdea".match(og); //["a","a"]
+
+	var ig = /a/ig; //패턴을 함께 쓸 수 도있다
+	"AabcdAa".match(ig); //["A","a","A","a"]
+</script>
+</body>
+</html>
