@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	정규표현식
+	(\w+)\s(\w+)
+	예) coding everybody -> 두개의 그룹과 그 사이에 공백이 있으므로 표현식과 일치함
+	
+	() = 하나의 그룹
+	w = 문자를 의미함(A~Z, a~z,0~9)
+	+ = 수량자, 앞에있는 문자가 하나 이상인 경우 유효한 패턴
+	\s = 공백을 의미함
+	
+	var pattern = /(\w+)\s(\w+)/;
+	var str = "coding everybody";
+
+	var result = str.replace(pattern, '$2','$1');   -> 패턴이라는 표현식의 두번째 그룹(evertbody) 과 첫번째 그룹(coding)를 치환함
+	console.log(result);
+	결과 : everybody, coding
+
+	이런 식으로 그룹을 지정하고 그룹을 가져와서 사용하는 개념을 캡처 라고한다.
+	*/
+</script>
+</body>
+</html>
