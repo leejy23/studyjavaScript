@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	// 전역변수와 지역변수
+	var vscope = 'global';  //전역변수, 함수 밖에서 정의된 변수, 다양한 곳에서 사용 가능
+	function fscope(){
+	    alert(vscope);
+	}
+	fscope(); // global
+
+	var vscope = 'global';
+	function fscope2(){
+		var vscope = 'local'; //지역변수, 함수 안에 정의된 변수, 함수 내에서만 접근 가능
+	    alert(vscope);
+	}
+	fscope2(); // local
+
+	var vscope = 'global';
+	function fscope3(){
+		 vscope = 'local'; // var이 없기 때문에 지역변수를 만든것이 아니고, 전역변수를 가져와 local을 집어넣음	    
+	}
+	fscope3();
+	alert(vscope);  // local
+	//가급적 함수명 충돌을 피하기 위해 전역변수 사용은 지양함
+</script>
+</body>
+</html>
