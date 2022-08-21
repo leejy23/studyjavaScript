@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//자바스크립트에서는 함수도 객체다. 다시 말해서 일종의 값이다. 거의 모든 언어가 함수를 가지고 있다. 자바스크립트의 함수가 다른 점은 함수 자체가 값이 될 수 있다는 것이다.
+
+		function a(){}
+
+		//이렇게 객체의 속성 값으로 담겨진 함수를 메소드라고 부른다.
+		a = {
+			b:function(){  // key: b, value: function()
+
+			}
+		};
+		//함수는 값이기 때문에 다른 함수의 인자로 전달 될수도 있다.
+		function cal (func, num){
+			return func(num)
+		}
+		function increase (num){
+			return num+1
+		}
+		function decrease(num){
+			return num-1
+		}
+		alert(cal(increase,1));
+		alert(cal(decrease,1));
+		// 결과 (2,0)
+	</script>
+</body>
+</html>
