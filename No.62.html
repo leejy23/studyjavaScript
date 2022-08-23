@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	클로저는 내부함수가 외부함수의 맥락에서 접근할 수 있는 것을 가르킨다. 클로저는 자바스크립트를 이용한 고난이도의 테크닉을 구사하는데 필수적인 개념으로 활용된다.
+	*/
+
+	//자바스크립트는 함수 안에서 또 다른  함수를 선언할 수 있다. 안에 있는게 이너, 밖에 둘러싼게 아우터로 불림
+	function outter(){      //외부함수
+		var title = 'coding world'  //외부함수의 지역변수
+		function inner(){   //내부함수, 내부함수에서 외부함수의 지역변수에 접근할 수 있다.
+			//var title = 'coding world';
+			alert(title);
+		}
+		inner();
+	}
+	outter();
+</script>
+</body>
+</html>
